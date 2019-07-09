@@ -20,11 +20,15 @@
     // Override point for customization after application launch.
     ParseClientConfiguration *config = [ParseClientConfiguration   configurationWithBlock:^(id<ParseMutableClientConfiguration> configuration) {
         
-        configuration.applicationId = @"codepathInstagram";
-        configuration.server = @"http://codepathfbinstagram.herokuapp.com/parse";
+        configuration.applicationId = @"InstagramByMV";
+        configuration.server = @"https://instagram-m-vargas.herokuapp.com/parse";
     }];
-    
     [Parse initializeWithConfiguration:config];
+    
+    if (PFUser.currentUser) {
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        self.window.rootViewController = [storyboard instantiateViewControllerWithIdentifier:@"LoggedInView"];
+    }
     
     return YES;
 }
