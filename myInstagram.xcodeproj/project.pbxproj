@@ -10,6 +10,8 @@
 		06B6FDF7DB70F278D61422B4 /* Pods_myInstagramTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7747F24E14CAA2E0BAC643BA /* Pods_myInstagramTests.framework */; };
 		3A18D628E5C07392BD679539 /* Pods_myInstagramUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7E0E00482646F1D803CF1A1 /* Pods_myInstagramUITests.framework */; };
 		7FE59927B7157D8B994D1776 /* Pods_myInstagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F50A331DAEFE15166B652395 /* Pods_myInstagram.framework */; };
+		FF0B803D22D5412D00E37BF8 /* PostingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF0B803C22D5412D00E37BF8 /* PostingViewController.m */; };
+		FF0B804122D5452B00E37BF8 /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = FF0B804022D5452B00E37BF8 /* Post.m */; };
 		FF2F51B922D3FAF700CEBDC9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FF2F51B822D3FAF700CEBDC9 /* AppDelegate.m */; };
 		FF2F51BF22D3FAF700CEBDC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF2F51BD22D3FAF700CEBDC9 /* Main.storyboard */; };
 		FF2F51C122D3FAF800CEBDC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF2F51C022D3FAF800CEBDC9 /* Assets.xcassets */; };
@@ -49,6 +51,10 @@
 		C7E0E00482646F1D803CF1A1 /* Pods_myInstagramUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_myInstagramUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F50A331DAEFE15166B652395 /* Pods_myInstagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_myInstagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6C98D03D0B36A5BD21F007E /* Pods-myInstagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myInstagram.debug.xcconfig"; path = "Target Support Files/Pods-myInstagram/Pods-myInstagram.debug.xcconfig"; sourceTree = "<group>"; };
+		FF0B803B22D5412D00E37BF8 /* PostingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostingViewController.h; sourceTree = "<group>"; };
+		FF0B803C22D5412D00E37BF8 /* PostingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostingViewController.m; sourceTree = "<group>"; };
+		FF0B803F22D5452B00E37BF8 /* Post.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
+		FF0B804022D5452B00E37BF8 /* Post.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
 		FF2F51B422D3FAF700CEBDC9 /* myInstagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myInstagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF2F51B722D3FAF700CEBDC9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FF2F51B822D3FAF700CEBDC9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -122,6 +128,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		FF0B803E22D544FF00E37BF8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FF0B803F22D5452B00E37BF8 /* Post.h */,
+				FF0B804022D5452B00E37BF8 /* Post.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		FF2F51AB22D3FAF700CEBDC9 = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +164,7 @@
 			children = (
 				FF2F51B722D3FAF700CEBDC9 /* AppDelegate.h */,
 				FF2F51B822D3FAF700CEBDC9 /* AppDelegate.m */,
+				FF0B803E22D544FF00E37BF8 /* Models */,
 				FFB37E1C22D4050B00366643 /* View Controllers */,
 				FF2F51BD22D3FAF700CEBDC9 /* Main.storyboard */,
 				FF2F51C022D3FAF800CEBDC9 /* Assets.xcassets */,
@@ -186,6 +202,8 @@
 				FFB37E2122D4091700366643 /* RegisterViewController.m */,
 				FFB37E2322D40A8400366643 /* LoggedInViewController.h */,
 				FFB37E2422D40A8400366643 /* LoggedInViewController.m */,
+				FF0B803B22D5412D00E37BF8 /* PostingViewController.h */,
+				FF0B803C22D5412D00E37BF8 /* PostingViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -413,8 +431,10 @@
 				FFB37E1F22D4076800366643 /* LoginViewController.m in Sources */,
 				FF2F51C722D3FAF800CEBDC9 /* main.m in Sources */,
 				FFB37E2522D40A8400366643 /* LoggedInViewController.m in Sources */,
+				FF0B803D22D5412D00E37BF8 /* PostingViewController.m in Sources */,
 				FF2F51B922D3FAF700CEBDC9 /* AppDelegate.m in Sources */,
 				FFB37E2222D4091700366643 /* RegisterViewController.m in Sources */,
+				FF0B804122D5452B00E37BF8 /* Post.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

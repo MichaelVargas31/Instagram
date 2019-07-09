@@ -11,7 +11,7 @@
 #import "AppDelegate.h"
 #import "Parse/Parse.h"
 
-@interface LoggedInViewController ()
+@interface LoggedInViewController () <UINavigationControllerDelegate>
 
 @end
 
@@ -20,6 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
     
 }
 
@@ -32,6 +33,11 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+
+
+
+
 
 
 - (IBAction)didTapLogout:(id)sender {
@@ -51,7 +57,7 @@
             AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
 
             UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-            LoginViewController *loginViewController = [storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
+            LoggedInViewController *loginViewController = [storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
             appDelegate.window.rootViewController = loginViewController;
             
         } else {
