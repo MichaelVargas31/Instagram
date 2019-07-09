@@ -11,6 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface LoggedInViewController : UIViewController
+- (IBAction)didTapLogout:(id)sender;
 
 @end
 

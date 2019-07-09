@@ -116,9 +116,16 @@
                             <outlet property="delegate" destination="RGO-3X-ett" id="iQw-ld-5G3"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="p8F-1J-d1h"/>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="p8F-1J-d1h">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="5uf-bw-D52">
+                            <connections>
+                                <action selector="didTapLogout:" destination="hzo-y5-cHY" id="552-2Y-wa1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xtq-nu-x8G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="hzo-y5-cHY" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1934.7826086956522" y="20.758928571428569"/>
         </scene>
