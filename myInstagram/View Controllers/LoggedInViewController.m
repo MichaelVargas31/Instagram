@@ -6,7 +6,9 @@
 //  Copyright © 2019 michaelvargas. All rights reserved.
 //
 
+#import "LoginViewController.h"
 #import "LoggedInViewController.h"
+#import "AppDelegate.h"
 #import "Parse/Parse.h"
 
 @interface LoggedInViewController ()
@@ -18,6 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
 }
 
 /*
@@ -30,6 +33,7 @@
 }
 */
 
+
 - (IBAction)didTapLogout:(id)sender {
     [PFUser logOutInBackgroundWithBlock:^(NSError * _Nullable error) {
         // PFUser.current() will now be nil
@@ -41,6 +45,18 @@
          LoginViewController *loginViewController = [storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
          appDelegate.window.rootViewController = loginViewController;
          */
+        if (!error) {
+            //            [self dismissViewControllerAnimated:YES completion:nil];
+            NSLog(@"You've successfully logged out");
+            AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+
+            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+            LoginViewController *loginViewController = [storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
+            appDelegate.window.rootViewController = loginViewController;
+            
+        } else {
+            NSLog(@"HEY, you failed to logout. Error: %@", error.localizedDescription);
+        }
         
         
     }];
