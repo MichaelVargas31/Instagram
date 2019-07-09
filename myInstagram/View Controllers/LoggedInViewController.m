@@ -10,8 +10,11 @@
 #import "LoggedInViewController.h"
 #import "AppDelegate.h"
 #import "Parse/Parse.h"
+#import "PostCell.h"
+#import "Post.h"
 
-@interface LoggedInViewController () <UINavigationControllerDelegate>
+
+@interface LoggedInViewController () <UINavigationControllerDelegate, UITableViewDelegate, UITableViewDataSource>
 
 @end
 
@@ -21,8 +24,41 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    [self fetchPosts];
+    NSLog(@"got posts");
+    
+    self.timelineTableView.delegate = self;
+    self.timelineTableView.dataSource = self;
+    
+    [self.timelineTableView reloadData];
+    
     
 }
+
+
+- (void) fetchPosts {
+    // construct query
+    PFQuery *query = [PFQuery queryWithClassName:@"Post"];
+//    [query whereKey:@"likesCount" greaterThan:@100];
+    [query orderByDescending:@"createdAt"];
+    [query includeKey:@"author"];
+
+    query.limit = 20;
+    
+    // fetch data asynchronously
+    [query findObjectsInBackgroundWithBlock:^(NSArray *posts, NSError *error) {
+        if (posts != nil) {
+            // do something with the array of object returned by the call
+            self.postArray = posts;
+            NSLog(@"got posts");
+            [self.timelineTableView reloadData];
+        } else {
+            NSLog(@"Error getting posts%@", error.localizedDescription);
+        }
+    }];
+    [self.timelineTableView reloadData];
+}
+
 
 /*
 #pragma mark - Navigation
@@ -67,4 +103,27 @@
         
     }];
 }
+
+
+
+- (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.postArray.count;
+}
+
+
+- (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    PostCell *newPostCell = [tableView dequeueReusableCellWithIdentifier:@"PostCell"];
+    
+//    Tweet *tweet = self.tweetArray[indexPath.row];
+    Post *post = self.postArray[indexPath.row];
+
+    
+//    newPostCell.postImageView.image = post.image;
+    newPostCell.postLabel.text = post.caption;
+    
+    return newPostCell;
+}
+
+
+
 @end

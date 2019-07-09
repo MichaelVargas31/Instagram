@@ -45,7 +45,7 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
     
     // Get the image captured by the UIImagePickerController
-    UIImage *originalImage = info[UIImagePickerControllerOriginalImage];
+//    UIImage *originalImage = info[UIImagePickerControllerOriginalImage];
     UIImage *editedImage = info[UIImagePickerControllerEditedImage];
     
     // Do something with the images (based on your use case)
@@ -84,17 +84,11 @@
 }
 */
 
-// This doesn't actually work correctly....
 - (IBAction)didTapCancel:(id)sender {
-//    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
-//
-//    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-//    LoggedInViewController *loggedInViewController = [storyboard instantiateViewControllerWithIdentifier:@"LoggedInViewController"];
-//    appDelegate.window.rootViewController = loggedInViewController;
-    
     [self dismissViewControllerAnimated:true completion:nil];
-
 }
+
+
 
 - (IBAction)didTapShare:(id)sender {
     [Post postUserImage:self.postingImageView.image withCaption:_postingTextView.text withCompletion:^(BOOL succeeded, NSError * _Nullable error) {

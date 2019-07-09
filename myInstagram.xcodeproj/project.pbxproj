@@ -12,6 +12,7 @@
 		7FE59927B7157D8B994D1776 /* Pods_myInstagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F50A331DAEFE15166B652395 /* Pods_myInstagram.framework */; };
 		FF0B803D22D5412D00E37BF8 /* PostingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF0B803C22D5412D00E37BF8 /* PostingViewController.m */; };
 		FF0B804122D5452B00E37BF8 /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = FF0B804022D5452B00E37BF8 /* Post.m */; };
+		FF0B804A22D550EC00E37BF8 /* PostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FF0B804922D550EC00E37BF8 /* PostCell.m */; };
 		FF2F51B922D3FAF700CEBDC9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FF2F51B822D3FAF700CEBDC9 /* AppDelegate.m */; };
 		FF2F51BF22D3FAF700CEBDC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF2F51BD22D3FAF700CEBDC9 /* Main.storyboard */; };
 		FF2F51C122D3FAF800CEBDC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF2F51C022D3FAF800CEBDC9 /* Assets.xcassets */; };
@@ -55,6 +56,8 @@
 		FF0B803C22D5412D00E37BF8 /* PostingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostingViewController.m; sourceTree = "<group>"; };
 		FF0B803F22D5452B00E37BF8 /* Post.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
 		FF0B804022D5452B00E37BF8 /* Post.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
+		FF0B804822D550EC00E37BF8 /* PostCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostCell.h; sourceTree = "<group>"; };
+		FF0B804922D550EC00E37BF8 /* PostCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostCell.m; sourceTree = "<group>"; };
 		FF2F51B422D3FAF700CEBDC9 /* myInstagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myInstagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF2F51B722D3FAF700CEBDC9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FF2F51B822D3FAF700CEBDC9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -137,6 +140,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		FF0B804422D5509200E37BF8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FF0B804822D550EC00E37BF8 /* PostCell.h */,
+				FF0B804922D550EC00E37BF8 /* PostCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		FF2F51AB22D3FAF700CEBDC9 = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +176,7 @@
 			children = (
 				FF2F51B722D3FAF700CEBDC9 /* AppDelegate.h */,
 				FF2F51B822D3FAF700CEBDC9 /* AppDelegate.m */,
+				FF0B804422D5509200E37BF8 /* Views */,
 				FF0B803E22D544FF00E37BF8 /* Models */,
 				FFB37E1C22D4050B00366643 /* View Controllers */,
 				FF2F51BD22D3FAF700CEBDC9 /* Main.storyboard */,
@@ -431,6 +444,7 @@
 				FFB37E1F22D4076800366643 /* LoginViewController.m in Sources */,
 				FF2F51C722D3FAF800CEBDC9 /* main.m in Sources */,
 				FFB37E2522D40A8400366643 /* LoggedInViewController.m in Sources */,
+				FF0B804A22D550EC00E37BF8 /* PostCell.m in Sources */,
 				FF0B803D22D5412D00E37BF8 /* PostingViewController.m in Sources */,
 				FF2F51B922D3FAF700CEBDC9 /* AppDelegate.m in Sources */,
 				FFB37E2222D4091700366643 /* RegisterViewController.m in Sources */,
