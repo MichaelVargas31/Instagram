@@ -12,6 +12,7 @@
 #import "Parse/Parse.h"
 #import "PostCell.h"
 #import "Post.h"
+#import "UIImageView+AFNetworking.h"
 
 
 @interface LoggedInViewController () <UINavigationControllerDelegate, UITableViewDelegate, UITableViewDataSource>
@@ -120,6 +121,16 @@
     
 //    newPostCell.postImageView.image = post.image;
     newPostCell.postLabel.text = post.caption;
+   
+    NSURL *imageURL = [NSURL URLWithString:post.image.url];
+    [newPostCell.postImageView setImageWithURL:imageURL];
+//    [post.image getDataInBackgroundWithBlock:^(NSData * _Nullable data, NSError * _Nullable error) {
+//        if (!error) {
+//            newPostCell.postImageView.image = (UIImage *)data;
+//        } else {
+//            NSLog(@"Error getingDataInBackground: %@", error.localizedDescription);
+//        }
+//    }];
     
     return newPostCell;
 }
