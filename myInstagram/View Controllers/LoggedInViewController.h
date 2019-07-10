@@ -13,8 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface LoggedInViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UITableView *timelineTableView;
-
 @property (strong, nonatomic) NSArray *postArray;
+
 - (IBAction)didTapLogout:(id)sender;
 
 

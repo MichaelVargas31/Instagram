@@ -14,6 +14,7 @@
 #import "PostCell.h"
 #import "Post.h"
 #import "UIImageView+AFNetworking.h"
+#import "DateTools.h"
 
 
 @interface LoggedInViewController () <UINavigationControllerDelegate, UITableViewDelegate, UITableViewDataSource>
@@ -134,10 +135,18 @@
 
     
 //    newPostCell.postImageView.image = post.image;
-    newPostCell.postLabel.text = post.caption;
-   
+    
+    newPostCell.usernameLabel.text = post.author.username;
     NSURL *imageURL = [NSURL URLWithString:post.image.url];
     [newPostCell.postImageView setImageWithURL:imageURL];
+    newPostCell.likeCountLabel.text = [NSString stringWithFormat:@"%@ likes", post.likeCount];
+    newPostCell.postLabel.text = post.caption;
+    
+    NSDate *postedAgoDate = [NSDate dateWithTimeIntervalSinceNow:post.createdAt.timeIntervalSinceNow];
+    newPostCell.timeAgoLabel.text = [NSString stringWithFormat:@"%@", postedAgoDate.shortTimeAgoSinceNow];
+    
+    
+   
 //    [post.image getDataInBackgroundWithBlock:^(NSData * _Nullable data, NSError * _Nullable error) {
 //        if (!error) {
 //            newPostCell.postImageView.image = (UIImage *)data;
