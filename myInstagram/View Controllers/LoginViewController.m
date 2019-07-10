@@ -26,6 +26,10 @@
     [self loginUser];
 }
 
+- (IBAction)didTapOut:(id)sender {
+    [self.view endEditing:YES];
+}
+
 - (void)loginUser {
     NSString *username = self.usernameTextField.text;
     NSString *password = self.passwordTextField.text;

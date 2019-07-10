@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UITextField *emailField;
 
 - (IBAction)didTapSignUp:(id)sender;
+- (IBAction)didTapOut:(id)sender;
 
 @end
 

@@ -84,14 +84,6 @@
 
 
 
-
-
-
-
-
-
-
-
 - (IBAction)didTapLogout:(id)sender {
     [PFUser logOutInBackgroundWithBlock:^(NSError * _Nullable error) {
         // PFUser.current() will now be nil
@@ -171,18 +163,13 @@
     NSIndexPath *indexPath = [self.timelineTableView indexPathForCell:tappedPost];
     Post *post = self.postArray[indexPath.row];
     
-    
-    DetailsViewController *detailsViewController = [segue destinationViewController];
-    detailsViewController.post = post;
-//    @dynamic postID;
-//    @dynamic userID;
-//    @dynamic author;
-//    @dynamic caption;
-//    @dynamic image;
-//    @dynamic likeCount;
-//    @dynamic commentCount;
-    
-    NSLog(@"post = %@", detailsViewController.post);
+    if ([segue.identifier  isEqual: @"DetailsSegue"]) {
+        DetailsViewController *detailsViewController = [segue destinationViewController];
+        detailsViewController.post = post;
+        NSLog(@"post = %@", detailsViewController.post);
+    } else if ([segue.identifier isEqual:@"ComposeSegue"]) {
+        ;
+    }
     
 }
 

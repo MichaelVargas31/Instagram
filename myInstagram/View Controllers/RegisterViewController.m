@@ -59,6 +59,10 @@
     [self registerUser];
 }
 
+- (IBAction)didTapOut:(id)sender {
+    [self.view endEditing:YES];
+}
+
 
 - (void)registerUser {
     // initialize a user object
