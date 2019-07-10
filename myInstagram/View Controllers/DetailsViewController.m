@@ -50,4 +50,9 @@
 }
 */
 
+- (IBAction)didTapBack:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:^{
+        NSLog(@"leaving");
+    }];
+}
 @end

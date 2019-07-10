@@ -27,7 +27,9 @@
     
     if (PFUser.currentUser) {
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-        self.window.rootViewController = [storyboard instantiateViewControllerWithIdentifier:@"LoggedInView"];
+//        self.window.rootViewController = [storyboard instantiateViewControllerWithIdentifier:@"LoggedInView"];
+        self.window.rootViewController = [storyboard instantiateViewControllerWithIdentifier:@"TabBarController"];
+
     }
     
     return YES;

@@ -13,6 +13,8 @@
 		FF0B803D22D5412D00E37BF8 /* PostingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF0B803C22D5412D00E37BF8 /* PostingViewController.m */; };
 		FF0B804122D5452B00E37BF8 /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = FF0B804022D5452B00E37BF8 /* Post.m */; };
 		FF0B804A22D550EC00E37BF8 /* PostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FF0B804922D550EC00E37BF8 /* PostCell.m */; };
+		FF2F39D122D6A69E00B4C39E /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF2F39D022D6A69E00B4C39E /* ProfileViewController.m */; };
+		FF2F39D422D6B0CA00B4C39E /* PostCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FF2F39D322D6B0CA00B4C39E /* PostCollectionCell.m */; };
 		FF2F51B922D3FAF700CEBDC9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FF2F51B822D3FAF700CEBDC9 /* AppDelegate.m */; };
 		FF2F51BF22D3FAF700CEBDC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF2F51BD22D3FAF700CEBDC9 /* Main.storyboard */; };
 		FF2F51C122D3FAF800CEBDC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF2F51C022D3FAF800CEBDC9 /* Assets.xcassets */; };
@@ -59,6 +61,10 @@
 		FF0B804022D5452B00E37BF8 /* Post.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
 		FF0B804822D550EC00E37BF8 /* PostCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostCell.h; sourceTree = "<group>"; };
 		FF0B804922D550EC00E37BF8 /* PostCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostCell.m; sourceTree = "<group>"; };
+		FF2F39CF22D6A69E00B4C39E /* ProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		FF2F39D022D6A69E00B4C39E /* ProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		FF2F39D222D6B0CA00B4C39E /* PostCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostCollectionCell.h; sourceTree = "<group>"; };
+		FF2F39D322D6B0CA00B4C39E /* PostCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostCollectionCell.m; sourceTree = "<group>"; };
 		FF2F51B422D3FAF700CEBDC9 /* myInstagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myInstagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF2F51B722D3FAF700CEBDC9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FF2F51B822D3FAF700CEBDC9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -148,6 +154,8 @@
 			children = (
 				FF0B804822D550EC00E37BF8 /* PostCell.h */,
 				FF0B804922D550EC00E37BF8 /* PostCell.m */,
+				FF2F39D222D6B0CA00B4C39E /* PostCollectionCell.h */,
+				FF2F39D322D6B0CA00B4C39E /* PostCollectionCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -222,6 +230,8 @@
 				FF0B803C22D5412D00E37BF8 /* PostingViewController.m */,
 				FF87D0C322D567C6002C01C5 /* DetailsViewController.h */,
 				FF87D0C422D567C6002C01C5 /* DetailsViewController.m */,
+				FF2F39CF22D6A69E00B4C39E /* ProfileViewController.h */,
+				FF2F39D022D6A69E00B4C39E /* ProfileViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -448,8 +458,10 @@
 			files = (
 				FFB37E1F22D4076800366643 /* LoginViewController.m in Sources */,
 				FF2F51C722D3FAF800CEBDC9 /* main.m in Sources */,
+				FF2F39D422D6B0CA00B4C39E /* PostCollectionCell.m in Sources */,
 				FFB37E2522D40A8400366643 /* LoggedInViewController.m in Sources */,
 				FF0B804A22D550EC00E37BF8 /* PostCell.m in Sources */,
+				FF2F39D122D6A69E00B4C39E /* ProfileViewController.m in Sources */,
 				FF0B803D22D5412D00E37BF8 /* PostingViewController.m in Sources */,
 				FF2F51B922D3FAF700CEBDC9 /* AppDelegate.m in Sources */,
 				FF87D0C522D567C6002C01C5 /* DetailsViewController.m in Sources */,

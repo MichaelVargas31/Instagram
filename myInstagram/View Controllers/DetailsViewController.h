@@ -21,6 +21,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *timeAgoLabel;
 @property (weak, nonatomic) IBOutlet UILabel *usernameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *likeCountLabel;
+- (IBAction)didTapBack:(id)sender;
+
+
 @end
 
 NS_ASSUME_NONNULL_END
