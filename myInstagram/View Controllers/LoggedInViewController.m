@@ -25,6 +25,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
+    [refreshControl addTarget:self action:@selector(beginRefresh:) forControlEvents:UIControlEventValueChanged];
+    [self.timelineTableView insertSubview:refreshControl atIndex:0];
+
+
+
+    
     [self fetchPosts];
     NSLog(@"got posts");
     
@@ -60,6 +67,18 @@
     [self.timelineTableView reloadData];
 }
 
+
+// Makes a network request to get updated data
+// Updates the tableView with the new data
+// Hides the RefreshControl
+- (void)beginRefresh:(UIRefreshControl *)refreshControl {
+    
+    // Create NSURL and NSURLRequest
+    [self fetchPosts];
+    
+    [self.timelineTableView reloadData];
+    [refreshControl endRefreshing];
+}
 
 /*
 #pragma mark - Navigation
