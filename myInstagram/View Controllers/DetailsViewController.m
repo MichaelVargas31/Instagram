@@ -7,6 +7,9 @@
 //
 
 #import "DetailsViewController.h"
+#import "UIImageView+AFNetworking.h"
+
+
 
 @interface DetailsViewController ()
 
@@ -18,7 +21,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     NSLog(@"post");
-    self.usernameLabel = post.userID;
+    self.usernameLabel.text = self.post.userID;
+    NSURL *imageURL = [NSURL URLWithString:self.post.image.url];
+    [self.detailsImageView setImageWithURL:imageURL];
+    self.detailsCaptionLabel.text = self.post.caption;
+    self.timeAgoLabel.text = [NSString stringWithFormat:@"%@", self.post.createdAt];
+    self.likeCountLabel.text = [NSString stringWithFormat:@"%@ likes", self.post.likeCount];
+
     // for time: timeago is on parsedashboard, you can still access using .createdAt
     
     
