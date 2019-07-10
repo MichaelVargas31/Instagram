@@ -8,6 +8,7 @@
 
 #import "LoginViewController.h"
 #import "LoggedInViewController.h"
+#import "DetailsViewController.h"
 #import "AppDelegate.h"
 #import "Parse/Parse.h"
 #import "PostCell.h"
@@ -80,15 +81,9 @@
     [refreshControl endRefreshing];
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+
+
 
 
 
@@ -154,6 +149,33 @@
     return newPostCell;
 }
 
+
+
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+    
+    UITableViewCell *tappedPost = sender;
+    NSIndexPath *indexPath = [self.timelineTableView indexPathForCell:tappedPost];
+    Post *post = self.postArray[indexPath.row];
+    
+    
+    DetailsViewController *detailsViewController = [segue destinationViewController];
+    detailsViewController.post = post;
+//    @dynamic postID;
+//    @dynamic userID;
+//    @dynamic author;
+//    @dynamic caption;
+//    @dynamic image;
+//    @dynamic likeCount;
+//    @dynamic commentCount;
+    
+    NSLog(@"post = %@", detailsViewController.post);
+    
+}
 
 
 @end

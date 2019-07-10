@@ -20,6 +20,7 @@
 		FF2F51C722D3FAF800CEBDC9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FF2F51C622D3FAF800CEBDC9 /* main.m */; };
 		FF2F51D122D3FAF800CEBDC9 /* myInstagramTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FF2F51D022D3FAF800CEBDC9 /* myInstagramTests.m */; };
 		FF2F51DC22D3FAF800CEBDC9 /* myInstagramUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FF2F51DB22D3FAF800CEBDC9 /* myInstagramUITests.m */; };
+		FF87D0C522D567C6002C01C5 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF87D0C422D567C6002C01C5 /* DetailsViewController.m */; };
 		FFB37E1F22D4076800366643 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB37E1E22D4076800366643 /* LoginViewController.m */; };
 		FFB37E2222D4091700366643 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB37E2122D4091700366643 /* RegisterViewController.m */; };
 		FFB37E2522D40A8400366643 /* LoggedInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB37E2422D40A8400366643 /* LoggedInViewController.m */; };
@@ -72,6 +73,8 @@
 		FF2F51D722D3FAF800CEBDC9 /* myInstagramUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = myInstagramUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF2F51DB22D3FAF800CEBDC9 /* myInstagramUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = myInstagramUITests.m; sourceTree = "<group>"; };
 		FF2F51DD22D3FAF800CEBDC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF87D0C322D567C6002C01C5 /* DetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
+		FF87D0C422D567C6002C01C5 /* DetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
 		FFB37E1D22D4076800366643 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		FFB37E1E22D4076800366643 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		FFB37E2022D4091700366643 /* RegisterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
@@ -217,6 +220,8 @@
 				FFB37E2422D40A8400366643 /* LoggedInViewController.m */,
 				FF0B803B22D5412D00E37BF8 /* PostingViewController.h */,
 				FF0B803C22D5412D00E37BF8 /* PostingViewController.m */,
+				FF87D0C322D567C6002C01C5 /* DetailsViewController.h */,
+				FF87D0C422D567C6002C01C5 /* DetailsViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -447,6 +452,7 @@
 				FF0B804A22D550EC00E37BF8 /* PostCell.m in Sources */,
 				FF0B803D22D5412D00E37BF8 /* PostingViewController.m in Sources */,
 				FF2F51B922D3FAF700CEBDC9 /* AppDelegate.m in Sources */,
+				FF87D0C522D567C6002C01C5 /* DetailsViewController.m in Sources */,
 				FFB37E2222D4091700366643 /* RegisterViewController.m in Sources */,
 				FF0B804122D5452B00E37BF8 /* Post.m in Sources */,
 			);

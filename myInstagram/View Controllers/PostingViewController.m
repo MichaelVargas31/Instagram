@@ -49,7 +49,7 @@
     UIImage *editedImage = info[UIImagePickerControllerEditedImage];
     
     // Do something with the images (based on your use case)
-    [self resizeImage:editedImage withSize:CGSizeMake(100, 100)];
+    [self resizeImage:editedImage withSize:CGSizeMake(500, 500)];
     self.postingImageView.image = editedImage;
     
     
