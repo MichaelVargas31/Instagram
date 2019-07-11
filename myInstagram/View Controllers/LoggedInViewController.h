@@ -14,8 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (weak, nonatomic) IBOutlet UITableView *timelineTableView;
 @property (strong, nonatomic) NSArray *postArray;
-- (IBAction)didTapLogout:(id)sender;
 
+- (IBAction)didTapLogout:(id)sender;
 
 @end
 

@@ -18,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (IBAction)didTapSignUp:(id)sender;
 - (IBAction)didTapOut:(id)sender;
+- (IBAction)didTapCancel:(id)sender;
 
 @end
 

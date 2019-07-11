@@ -27,10 +27,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
     [refreshControl addTarget:self action:@selector(beginRefresh:) forControlEvents:UIControlEventValueChanged];
     [self.timelineTableView insertSubview:refreshControl atIndex:0];
-
 
 
     
@@ -42,8 +42,8 @@
     
     [self.timelineTableView reloadData];
     
-    
 }
+
 
 
 - (void) fetchPosts {
@@ -124,6 +124,8 @@
     
 //    Tweet *tweet = self.tweetArray[indexPath.row];
     Post *post = self.postArray[indexPath.row];
+    
+    newPostCell.post = post;
 
     
 //    newPostCell.postImageView.image = post.image;
