@@ -67,9 +67,11 @@
     
     if ([self.likedByList containsObject:(PFUser.currentUser)]) {
 //        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"author != %@", PFUser.currentUser];
-        NSArray *newLikeArray = [self.likedByList filteredArrayUsingPredicate:predicate];
-//        self removeObjectFor
-        self.likedByList = newLikeArray;
+//        NSArray *newLikeArray = [self.likedByList filteredArrayUsingPredicate:predicate];
+        
+        [self removeObjectsInArray:self.likedByList forKey:@"likedByList"];
+        
+//        self.likedByList = newLikeArray;
         self.likeCount = [NSNumber numberWithInt:[self.likeCount intValue] -1];
     } else {
         NSArray *newLikeArray = [self.likedByList arrayByAddingObject:PFUser.currentUser];
@@ -79,7 +81,7 @@
     }
     
     [self saveInBackground];
-    NSLog(@"SavedInBackground?");
+//    NSLog(@"SavedInBackground?");
     NSLog(@"like list = %@", self.likedByList);
 }
 
