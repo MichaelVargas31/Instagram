@@ -14,8 +14,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (weak, nonatomic) IBOutlet UITableView *timelineTableView;
 @property (strong, nonatomic) NSArray *postArray;
+@property (assign, nonatomic) BOOL isMoreDataLoading;
+
+
+
 
 - (IBAction)didTapLogout:(id)sender;
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView;
 
 @end
 

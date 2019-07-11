@@ -17,7 +17,8 @@
 #import "DateTools.h"
 
 
-@interface LoggedInViewController () <UINavigationControllerDelegate, UITableViewDelegate, UITableViewDataSource>
+@interface LoggedInViewController () <UINavigationControllerDelegate, UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate>
+
 
 @end
 
@@ -53,7 +54,7 @@
     [query orderByDescending:@"createdAt"];
     [query includeKey:@"author"];
 
-    query.limit = 20;
+    query.limit = 10;
     
     // fetch data asynchronously
     [query findObjectsInBackgroundWithBlock:^(NSArray *posts, NSError *error) {
@@ -110,6 +111,59 @@
         
         
     }];
+}
+
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    // Handle scroll behavior here
+    if(!self.isMoreDataLoading){
+        // Calculate the position of one screen length before the bottom of the results
+        int scrollViewContentHeight = self.timelineTableView.contentSize.height;
+        int scrollOffsetThreshold = scrollViewContentHeight - self.timelineTableView.bounds.size.height;
+        
+        // When the user has scrolled past the threshold, start requesting
+        if(scrollView.contentOffset.y > scrollOffsetThreshold && self.timelineTableView.isDragging) {
+            self.isMoreDataLoading = true;
+            
+            // ... Code to load more results ...
+            [self loadMoreData];
+            
+            
+        }
+    }
+}
+
+-(void)loadMoreData{
+    PFQuery *query = [PFQuery queryWithClassName:@"Post"];
+    //    [query whereKey:@"likesCount" greaterThan:@100];
+    [query orderByDescending:@"createdAt"];
+    [query includeKey:@"author"];
+    
+    NSLog(@"%@", [self.postArray lastObject]);
+    Post *lastPost = [self.postArray lastObject];
+    [query whereKey:@"createdAt" lessThan:lastPost.createdAt];
+    
+    query.limit = 20;
+    
+    // fetch data asynchronously
+    [query findObjectsInBackgroundWithBlock:^(NSArray *posts, NSError *error) {
+        if (posts != nil) {
+            // do something with the array of object returned by the call
+            NSArray *newArray =  [self.postArray arrayByAddingObjectsFromArray:posts];
+//            [newArray arrayByAddingObjectsFromArray:posts];
+//
+//            NSLog(@"got more posts");
+//            NSLog(@"new last posts = %@", [posts lastObject]);
+//            NSLog(@"New post array with length %lu = %@", newArray.count, newArray);
+            self.postArray = newArray;
+            
+            [self.timelineTableView reloadData];
+        } else {
+            NSLog(@"Error getting posts%@", error.localizedDescription);
+        }
+    }];
+    [self.timelineTableView reloadData];
+    
 }
 
 

@@ -22,6 +22,7 @@
 		FF2F51C722D3FAF800CEBDC9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FF2F51C622D3FAF800CEBDC9 /* main.m */; };
 		FF2F51D122D3FAF800CEBDC9 /* myInstagramTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FF2F51D022D3FAF800CEBDC9 /* myInstagramTests.m */; };
 		FF2F51DC22D3FAF800CEBDC9 /* myInstagramUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FF2F51DB22D3FAF800CEBDC9 /* myInstagramUITests.m */; };
+		FF64C80C22D7EC57000929E8 /* InfiniteScrollActivityView.m in Sources */ = {isa = PBXBuildFile; fileRef = FF64C80B22D7EC57000929E8 /* InfiniteScrollActivityView.m */; };
 		FF87D0C522D567C6002C01C5 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF87D0C422D567C6002C01C5 /* DetailsViewController.m */; };
 		FFB37E1F22D4076800366643 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB37E1E22D4076800366643 /* LoginViewController.m */; };
 		FFB37E2222D4091700366643 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB37E2122D4091700366643 /* RegisterViewController.m */; };
@@ -79,6 +80,8 @@
 		FF2F51D722D3FAF800CEBDC9 /* myInstagramUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = myInstagramUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF2F51DB22D3FAF800CEBDC9 /* myInstagramUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = myInstagramUITests.m; sourceTree = "<group>"; };
 		FF2F51DD22D3FAF800CEBDC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF64C80A22D7EC57000929E8 /* InfiniteScrollActivityView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InfiniteScrollActivityView.h; sourceTree = "<group>"; };
+		FF64C80B22D7EC57000929E8 /* InfiniteScrollActivityView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InfiniteScrollActivityView.m; sourceTree = "<group>"; };
 		FF87D0C322D567C6002C01C5 /* DetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
 		FF87D0C422D567C6002C01C5 /* DetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
 		FFB37E1D22D4076800366643 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -156,6 +159,8 @@
 				FF0B804922D550EC00E37BF8 /* PostCell.m */,
 				FF2F39D222D6B0CA00B4C39E /* PostCollectionCell.h */,
 				FF2F39D322D6B0CA00B4C39E /* PostCollectionCell.m */,
+				FF64C80A22D7EC57000929E8 /* InfiniteScrollActivityView.h */,
+				FF64C80B22D7EC57000929E8 /* InfiniteScrollActivityView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -460,6 +465,7 @@
 				FF2F51C722D3FAF800CEBDC9 /* main.m in Sources */,
 				FF2F39D422D6B0CA00B4C39E /* PostCollectionCell.m in Sources */,
 				FFB37E2522D40A8400366643 /* LoggedInViewController.m in Sources */,
+				FF64C80C22D7EC57000929E8 /* InfiniteScrollActivityView.m in Sources */,
 				FF0B804A22D550EC00E37BF8 /* PostCell.m in Sources */,
 				FF2F39D122D6A69E00B4C39E /* ProfileViewController.m in Sources */,
 				FF0B803D22D5412D00E37BF8 /* PostingViewController.m in Sources */,
