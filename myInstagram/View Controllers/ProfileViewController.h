@@ -19,6 +19,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *bioLabel;
 @property (weak, nonatomic) IBOutlet UILabel *usernameLabel;
 
+@property (weak, nonatomic) IBOutlet UICollectionView *postCollectionView;
+
 @property (strong, nonatomic) NSArray *postArray;
 
 
