@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "InfiniteScrollActivityView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -16,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) NSArray *postArray;
 @property (assign, nonatomic) BOOL isMoreDataLoading;
 
-
+@property (strong, nonatomic) InfiniteScrollActivityView* loadingMoreView;
 
 
 - (IBAction)didTapLogout:(id)sender;

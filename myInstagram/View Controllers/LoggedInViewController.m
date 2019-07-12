@@ -24,11 +24,25 @@
 
 @implementation LoggedInViewController
 
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
     
+    // Set up Infinite Scroll loading indicator
+    CGRect frame = CGRectMake(0, self.timelineTableView.contentSize.height, self.timelineTableView.bounds.size.width, InfiniteScrollActivityView.defaultHeight);
+    self.loadingMoreView = [[InfiniteScrollActivityView alloc] initWithFrame:frame];
+    self.loadingMoreView.hidden = true;
+    [self.timelineTableView addSubview:self.loadingMoreView];
+    
+    UIEdgeInsets insets = self.timelineTableView.contentInset;
+    
+    insets.bottom += InfiniteScrollActivityView.defaultHeight;
+    self.timelineTableView.contentInset = insets;
+    
+    // Set up refresh control
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
     [refreshControl addTarget:self action:@selector(beginRefresh:) forControlEvents:UIControlEventValueChanged];
     [self.timelineTableView insertSubview:refreshControl atIndex:0];
@@ -125,6 +139,11 @@
         if(scrollView.contentOffset.y > scrollOffsetThreshold && self.timelineTableView.isDragging) {
             self.isMoreDataLoading = true;
             
+            // Update position of loadingMoreView, and start loading indicator
+            CGRect frame = CGRectMake(0, self.timelineTableView.contentSize.height, self.timelineTableView.bounds.size.width, InfiniteScrollActivityView.defaultHeight);
+            self.loadingMoreView.frame = frame;
+            [self.loadingMoreView startAnimating];
+            
             // ... Code to load more results ...
             [self loadMoreData];
             
@@ -158,6 +177,8 @@
             self.postArray = newArray;
             
             [self.timelineTableView reloadData];
+            [self.loadingMoreView stopAnimating];
+
         } else {
             NSLog(@"Error getting posts%@", error.localizedDescription);
         }
