@@ -565,6 +565,9 @@
                                         <state key="normal" title="Edit Profile">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="gjB-5s-7Ke" kind="presentation" id="3B1-UC-Kc9"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
@@ -586,6 +589,75 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hDq-TC-xa4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="957.97101449275374" y="843.75"/>
+        </scene>
+        <!--Edit Profile View Controller-->
+        <scene sceneID="uMu-el-UCK">
+            <objects>
+                <viewController id="gjB-5s-7Ke" customClass="EditProfileViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hDi-o1-p0W">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XFV-2f-VIk">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="hEl-Ed-aYN">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="hOc-Gb-e2G">
+                                            <connections>
+                                                <action selector="didTapBack:" destination="gjB-5s-7Ke" id="xra-YH-y48"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GF1-ri-w2K">
+                                <rect key="frame" x="20" y="138" width="374" height="128"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="0.46591395547945208" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="cd0-84-Oo3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Edit Bio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lp0-7m-rb1">
+                                <rect key="frame" x="20" y="109" width="62" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I3I-Dy-iBp">
+                                <rect key="frame" x="329" y="274" width="59" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="59" id="l4D-H2-fvw"/>
+                                    <constraint firstAttribute="height" constant="40" id="ulR-ES-Ejj"/>
+                                </constraints>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="didTapSaveBio:" destination="gjB-5s-7Ke" eventType="touchUpInside" id="cfa-hR-8so"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="GF1-ri-w2K" firstAttribute="top" secondItem="XFV-2f-VIk" secondAttribute="bottom" constant="50" id="1YC-ZK-v9R"/>
+                            <constraint firstItem="GF1-ri-w2K" firstAttribute="leading" secondItem="cBp-YR-byc" secondAttribute="leading" constant="20" id="2yf-gB-Cpc"/>
+                            <constraint firstItem="I3I-Dy-iBp" firstAttribute="top" secondItem="GF1-ri-w2K" secondAttribute="bottom" constant="8" id="FWA-ZS-Pgj"/>
+                            <constraint firstItem="XFV-2f-VIk" firstAttribute="top" secondItem="cBp-YR-byc" secondAttribute="top" id="Z1C-Ie-zIp"/>
+                            <constraint firstItem="cBp-YR-byc" firstAttribute="trailing" secondItem="I3I-Dy-iBp" secondAttribute="trailing" constant="26" id="pKL-27-0lr"/>
+                            <constraint firstItem="XFV-2f-VIk" firstAttribute="trailing" secondItem="cBp-YR-byc" secondAttribute="trailing" id="vKr-Wp-T36"/>
+                            <constraint firstItem="XFV-2f-VIk" firstAttribute="leading" secondItem="cBp-YR-byc" secondAttribute="leading" id="xYp-Mz-PhI"/>
+                            <constraint firstItem="cBp-YR-byc" firstAttribute="trailing" secondItem="GF1-ri-w2K" secondAttribute="trailing" constant="20" id="zlg-3z-Wxf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cBp-YR-byc"/>
+                    </view>
+                    <connections>
+                        <outlet property="editBioTextView" destination="GF1-ri-w2K" id="fuz-AB-hfc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2f3-Be-81g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="957.97101449275374" y="1576.3392857142856"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cZb-fZ-ztH">
